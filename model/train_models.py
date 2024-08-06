@@ -41,11 +41,15 @@ def train_models(x_data : dict,
                 
             print(f"--- ✅finish train <<{model}>> on <<{method}>> data")
             results.append(_result)
+            results_df = pd.concat(results, ignore_index=True)
+            results_df.to_csv("./result/result.csv")
+
+
 
     print("✅finish train model")
 
     results = pd.concat(results, ignore_index=True)
 
-    results.to_csv("result.csv")
+    results.to_csv("./result/result.csv")
 
     print("             ✅save result in local path✅              ")
