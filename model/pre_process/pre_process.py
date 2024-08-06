@@ -1,5 +1,5 @@
 import pandas as pd
-from standardize import standardize
+from .standardize import standardize
 
 def pre_process(df: pd.DataFrame, class_column: str) -> list:
     print("📌 Start pre process ...")
